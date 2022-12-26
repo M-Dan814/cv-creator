@@ -10,6 +10,8 @@ class App extends Component {
     this.state = {
       name: "",
       father: "",
+      description: "",
+      photo: "",
       email: "",
       phone: "",
       address: "",
@@ -28,6 +30,8 @@ class App extends Component {
     this.handleChangeFather = this.handleChangeFather.bind(this);
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.handleChangePhone = this.handleChangePhone.bind(this);
+    this.handleChangePhoto = this.handleChangePhoto.bind(this);
+    this.handleChangeDescription = this.handleChangeDescription.bind(this);
     this.handleChangeAddress = this.handleChangeAddress.bind(this);
     this.handleChangeInstitution = this.handleChangeInstitution.bind(this);
     this.handleChangeStudy = this.handleChangeStudy.bind(this);
@@ -49,6 +53,21 @@ class App extends Component {
   handleChangeFather(e) {
     this.setState({
       father: e.target.value,
+    });
+  }
+
+  handleChangePhoto = (event) => {
+    if (event.target.files && event.target.files[0]) {
+      let img = event.target.files[0];
+      this.setState({
+        photo: URL.createObjectURL(img),
+      });
+    }
+  };
+
+  handleChangeDescription(e) {
+    this.setState({
+      description: e.target.value,
     });
   }
 
@@ -134,6 +153,8 @@ class App extends Component {
             handleChangePhone={this.handleChangePhone}
             handleChangeFather={this.handleChangeFather}
             handleChangeEmail={this.handleChangeEmail}
+            handleChangePhoto={this.handleChangePhoto}
+            handleChangeDescription={this.handleChangeDescription}
           />
           <Education
             handleChangeEduFrom={this.handleChangeEduFrom}
@@ -152,9 +173,11 @@ class App extends Component {
         <Generated
           name={this.state.name}
           father={this.state.father}
+          image={this.state.photo}
           address={this.state.address}
           phone={this.state.phone}
           email={this.state.email}
+          description={this.state.description}
           institution={this.state.institution}
           study={this.state.study}
           eduFrom={this.state.eduFrom}

@@ -10,11 +10,13 @@ class Generated extends Component {
       <div className="cv">
         <div className="gen">
           <h1 className="heading">General Info</h1>
+          <img src={this.props.image} height="200" width="200"/>
           <span>Name: {this.props.name}</span>
           <span>Father's Name: {this.props.father}</span>
           <span>Email: {this.props.email}</span>
           <span>Phone Number: {this.props.phone}</span>
           <span>Address: {this.props.address}</span>
+          <span>Description: {this.props.description}</span>
         </div>
         <div className="edu">
           <h1 className="heading">Education</h1>

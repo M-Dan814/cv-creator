@@ -22,8 +22,11 @@ class Experience extends Component {
           id="position"
         />
         <label htmlFor="tasks">Main tasks: </label>
-        <input
+        <textarea
           type="textarea"
+          rows={7}
+          cols="45"
+          placeholder="A brief description of the tasks you performed at this job..."
           onChange={this.props.handleChangeTasks}
           id="tasks"
         />
