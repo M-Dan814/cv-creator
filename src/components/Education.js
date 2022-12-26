@@ -7,7 +7,7 @@ class Education extends Component {
 
   render() {
     return (
-      <div className="section" id="exp">
+      <div className="section" id="edu">
         <h1 className="heading">Education</h1>
         <label htmlFor="institution">Institution Name: </label>
         <input

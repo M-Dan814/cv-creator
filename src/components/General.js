@@ -27,7 +27,7 @@ class General extends Component {
           onChange={this.props.handleChangeEmail}
           id="email"
         />
-        <label htmlFor="phone">Name: </label>
+        <label htmlFor="phone">Phone Number: </label>
         <input
           type="tel"
           onChange={this.props.handleChangePhone}

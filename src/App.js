@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { General } from "./components/General";
 import { Education } from "./components/Education";
 import { Experience } from "./components/Experience";
+import { Generated } from "./components/generatedCV";
 
 class App extends Component {
   constructor() {
@@ -43,7 +44,6 @@ class App extends Component {
     this.setState({
       name: e.target.value,
     });
-    console.log(this.state);
   }
 
   handleChangeFather(e) {
@@ -74,7 +74,6 @@ class App extends Component {
     this.setState({
       institution: e.target.value,
     });
-    console.log(this.state);
   }
 
   handleChangeStudy(e) {
@@ -99,7 +98,6 @@ class App extends Component {
     this.setState({
       company: e.target.value,
     });
-    console.log(this.state);
   }
 
   handleChangePosition(e) {
@@ -129,25 +127,43 @@ class App extends Component {
   render() {
     return (
       <div>
-        <General
-          handleChangeName={this.handleChangeName}
-          handleChangeAddress={this.handleChangeAddress}
-          handleChangePhone={this.handleChangePhone}
-          handleChangeFather={this.handleChangeFather}
-          handleChangeEmail={this.handleChangeEmail}
-        />
-        <Education
-          handleChangeEduFrom={this.handleChangeEduFrom}
-          handleChangeEduTo={this.handleChangeEduTo}
-          handleChangeStudy={this.handleChangeStudy}
-          handleChangeInstitution={this.handleChangeInstitution}
-        />
-        <Experience
-          handleChangeCompany={this.handleChangeCompany}
-          handleChangePosition={this.handleChangePosition}
-          handleChangeExpFrom={this.handleChangeExpFrom}
-          handleChangeExpTo={this.handleChangeExpTo}
-          handleChangeTasks={this.handleChangeTasks}
+        <div className="input-form">
+          <General
+            handleChangeName={this.handleChangeName}
+            handleChangeAddress={this.handleChangeAddress}
+            handleChangePhone={this.handleChangePhone}
+            handleChangeFather={this.handleChangeFather}
+            handleChangeEmail={this.handleChangeEmail}
+          />
+          <Education
+            handleChangeEduFrom={this.handleChangeEduFrom}
+            handleChangeEduTo={this.handleChangeEduTo}
+            handleChangeStudy={this.handleChangeStudy}
+            handleChangeInstitution={this.handleChangeInstitution}
+          />
+          <Experience
+            handleChangeCompany={this.handleChangeCompany}
+            handleChangePosition={this.handleChangePosition}
+            handleChangeExpFrom={this.handleChangeExpFrom}
+            handleChangeExpTo={this.handleChangeExpTo}
+            handleChangeTasks={this.handleChangeTasks}
+          />
+        </div>
+        <Generated
+          name={this.state.name}
+          father={this.state.father}
+          address={this.state.address}
+          phone={this.state.phone}
+          email={this.state.email}
+          institution={this.state.institution}
+          study={this.state.study}
+          eduFrom={this.state.eduFrom}
+          eduTo={this.state.eduTo}
+          company={this.state.company}
+          position={this.state.position}
+          tasks={this.state.tasks}
+          expFrom={this.state.expFrom}
+          expTo={this.state.expTo}
         />
       </div>
     );
