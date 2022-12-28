@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cv-creator/static/css/main.31e3159a.css",
+    "main.js": "/cv-creator/static/js/main.c36cf386.js",
+    "static/media/RobotoSlab-Regular.ttf": "/cv-creator/static/media/RobotoSlab-Regular.39c7af8a5d124ff3c247.ttf",
+    "index.html": "/cv-creator/index.html",
+    "main.31e3159a.css.map": "/cv-creator/static/css/main.31e3159a.css.map",
+    "main.c36cf386.js.map": "/cv-creator/static/js/main.c36cf386.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31e3159a.css",
+    "static/js/main.c36cf386.js"
+  ]
+}
