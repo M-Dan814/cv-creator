@@ -7,7 +7,7 @@ class Education extends Component {
 
   render() {
     return (
-      <div className="section" id="edu">
+      <fieldset className="section" id="edu">
         <h1 className="heading">Education</h1>
         <label htmlFor="institution">Institution Name: </label>
         <input
@@ -21,7 +21,7 @@ class Education extends Component {
         <input type="date" onChange={this.props.handleChangeEduFrom} id="from" />
         <label htmlFor="to">To: </label>
         <input type="date" onChange={this.props.handleChangeEduTo} id="to" />
-      </div>
+      </fieldset>
     );
   }
 }

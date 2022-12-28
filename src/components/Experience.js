@@ -7,7 +7,7 @@ class Experience extends Component {
 
   render() {
     return (
-      <div className="section" id="exp">
+      <fieldset className="section" id="exp">
           <h1 className="heading">Experience</h1>
           <label htmlFor="company">Company Name: </label>
           <input
@@ -38,7 +38,7 @@ class Experience extends Component {
           />
           <label htmlFor="to">To: </label>
           <input type="date" onChange={this.props.handleChangeExpTo} id="to" />
-      </div>
+      </fieldset>
     );
   }
 }

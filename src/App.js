@@ -149,24 +149,25 @@ class App extends Component {
     });
   }
 
-  Submit(){
+  Submit(e){
+    e.preventDefault();
     const input = document.querySelector('.input-form');
-    input.classList.add("hidden")
+    input.id = "hidden"
     const output = document.querySelector(".cv")
-    output.classList.remove("hidden")
+    output.id = ""
   }
 
   Edit(){
     const output = document.querySelector('.cv');
-    output.classList.add("hidden")
+    output.id = "hidden"
     const input = document.querySelector(".input-form")
-    input.classList.remove("hidden")
+    input.id = ""
   }
   render() {
     return (
       <div>
         <Header />
-        <div className="input-form">
+        <form className="input-form">
           <General
             handleChangeName={this.handleChangeName}
             handleChangeAddress={this.handleChangeAddress}
@@ -189,8 +190,8 @@ class App extends Component {
             handleChangeExpTo={this.handleChangeExpTo}
             handleChangeTasks={this.handleChangeTasks}
           />
-          <button onClick={this.Submit}>Generate CV</button>
-        </div>
+          <button type="submit" className="submit" onClick={this.Submit}>Generate CV</button>
+        </form>
         <Generated
           name={this.state.name}
           father={this.state.father}

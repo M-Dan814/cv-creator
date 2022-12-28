@@ -7,7 +7,7 @@ class General extends Component {
 
   render() {
     return (
-      <div className="section" id="gen">
+      <fieldset className="section" id="gen">
         <h1 className="heading">General Info</h1>
         <label htmlFor="name">Name: </label>
         <input type="text" onChange={this.props.handleChangeName} id="name" />
@@ -35,7 +35,7 @@ class General extends Component {
         />
         <label htmlFor="des">Description: </label>
         <textarea onChange={this.props.handleChangeDescription} id="des" placeholder="A brief summary of yourself. Keep it short. About 3 to 4 lines is ideal." rows={7} cols="45"/>
-      </div>
+      </fieldset>
     );
   }
 }

@@ -1,0 +1,210 @@
+html {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(186, 186, 241);
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+#hidden {
+  display: none;
+}
+
+.input-form {
+  background-color: rgb(226, 238, 250);
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  min-width: 80vw;
+  border-radius: 3px;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.25);
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label[for="image"] {
+  border: 1px solid;
+  padding: 4px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  background-color: rgb(208, 232, 255);
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input {
+  padding: 4px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  background-color: rgb(208, 232, 255);
+  border: 1px solid;
+}
+
+input:active {
+  background-color: rgb(143, 195, 243);
+}
+
+input:focus {
+  background-color: rgb(204, 221, 238);
+}
+
+textarea {
+  padding: 4px;
+  border-radius: 3px;
+  border: 1px solid;
+  resize: none;
+  background-color: rgb(208, 232, 255);
+}
+
+textarea:focus {
+  background-color: rgb(175, 216, 255);
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  font-size: 2.3rem;
+}
+
+.submit {
+  background-color: green;
+  color: white;
+  padding: 12px;
+  width: 30%;
+  border: 0;
+  border-radius: 3px;
+  margin: auto;
+  margin-top: 8px;
+}
+
+.submit:hover {
+  cursor: pointer;
+  background-color: rgb(152, 179, 214);
+  color: green;
+  transform: scale(1.1);
+}
+
+.cv {
+  background-color: white;
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 80px;
+  border-radius: 3px;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.25);
+  background-color: rgb(232, 232, 255);
+  min-width: 70vw;
+  min-height: 70vh;
+}
+
+.gen {
+  grid-column-start: 3;
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border-left: 1px solid rgb(118, 118, 255);
+  border-bottom: 1px solid rgb(118, 118, 255);
+  padding: 8px;
+  background-color: rgb(232, 232, 255);
+}
+
+.edu {
+  grid-row-start: 1;
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.cv > button {
+  grid-column: span 3;
+  margin: auto;
+  width: 20%;
+  padding: 8px;
+  border: 0;
+  background-color: rgb(69, 69, 221);
+  color: white;
+  border-radius: 4px;
+}
+
+.cv > button:hover {
+  color: rgb(69, 69, 221);
+  background-color: rgb(175, 202, 243);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+span {
+  margin-left: 40px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.footer {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  color: white;
+  padding: 8px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+input:invalid:focus {
+  border: red 1px solid;
+  background-color: rgb(247, 184, 184);
+}
+
+input:invalid {
+  border: red 1px solid;
+  padding: 4px;
+}
+
+fieldset {
+  border: 0;
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .cv{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25vh;
+  }
+  
+}

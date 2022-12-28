@@ -7,10 +7,9 @@ class Generated extends Component {
 
   render() {
     return (
-      <div className="cv hidden">
+      <div className="cv" id="hidden">
         <div className="gen">
-          <h1 className="heading">General Info</h1>
-          <img src={this.props.image} height="200" width="200"/>
+          <img alt="No file received" src={this.props.image} height="200" width="200"/>
           <span>Name: {this.props.name}</span>
           <span>Father's Name: {this.props.father}</span>
           <span>Email: {this.props.email}</span>
@@ -26,7 +25,7 @@ class Generated extends Component {
           <span>To: {this.props.eduTo}</span>
         </div>
         <div className="exp">
-          <h1>Experience</h1>
+          <h1 className="heading">Experience</h1>
           <span>Company: {this.props.company}</span>
           <span>Position: {this.props.position}</span>
           <span>Tasks: {this.props.tasks}</span>
