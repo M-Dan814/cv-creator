@@ -7,7 +7,7 @@ class Generated extends Component {
 
   render() {
     return (
-      <div className="cv">
+      <div className="cv hidden">
         <div className="gen">
           <h1 className="heading">General Info</h1>
           <img src={this.props.image} height="200" width="200"/>
@@ -33,6 +33,7 @@ class Generated extends Component {
           <span>From: {this.props.expFrom}</span>
           <span>To: {this.props.expTo}</span>
         </div>
+        <button onClick={this.props.edit}>Edit CV</button>
       </div>
     );
   }

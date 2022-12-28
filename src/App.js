@@ -24,6 +24,10 @@ class App extends Component {
       study: "",
       eduFrom: "",
       eduTo: "",
+      expCount: 1,
+      expCounter: [1],
+      eduCount: 1,
+      eduCounter: [1],
     };
 
     this.handleChangeName = this.handleChangeName.bind(this);
@@ -143,6 +147,19 @@ class App extends Component {
     });
   }
 
+  Submit(){
+    const input = document.querySelector('.input-form');
+    input.classList.add("hidden")
+    const output = document.querySelector(".cv")
+    output.classList.remove("hidden")
+  }
+
+  Edit(){
+    const output = document.querySelector('.cv');
+    output.classList.add("hidden")
+    const input = document.querySelector(".input-form")
+    input.classList.remove("hidden")
+  }
   render() {
     return (
       <div>
@@ -169,6 +186,7 @@ class App extends Component {
             handleChangeExpTo={this.handleChangeExpTo}
             handleChangeTasks={this.handleChangeTasks}
           />
+          <button onClick={this.Submit}>Generate CV</button>
         </div>
         <Generated
           name={this.state.name}
@@ -187,6 +205,7 @@ class App extends Component {
           tasks={this.state.tasks}
           expFrom={this.state.expFrom}
           expTo={this.state.expTo}
+          edit={this.Edit}
         />
       </div>
     );
