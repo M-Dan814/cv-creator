@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/RobotoSlab-Regular.ttf");
+}
+
 html {
   padding: 0;
   margin: 0;
@@ -9,12 +14,27 @@ html {
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
+  font-family: "Roboto";
 }
 
 .header {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.main-head{
+  margin-bottom: 0;
+}
+
+.sub-head {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 10vh;
 }
 
 #hidden {
@@ -30,7 +50,7 @@ html {
   border-radius: 3px;
   box-shadow: 3px 3px rgba(0, 0, 0, 0.25);
   gap: 12px;
-  margin-bottom: 50px;
+  margin-bottom: 20vh;
 }
 
 .section {
@@ -41,6 +61,7 @@ html {
 
 label[for="image"] {
   border: 1px solid;
+  color: black;
   padding: 4px;
   margin-bottom: 5px;
   border-radius: 3px;
@@ -49,6 +70,7 @@ label[for="image"] {
 
 label {
   font-size: 1.2rem;
+  color: rgb(20, 20, 255);
 }
 
 input {
@@ -82,8 +104,8 @@ textarea:focus {
 .heading {
   display: flex;
   justify-content: center;
-  text-decoration: underline;
-  font-size: 2.3rem;
+  font-size: 2.2rem;
+  color: rgb(51, 25, 145);
 }
 
 .submit {
@@ -116,6 +138,7 @@ textarea:focus {
   background-color: rgb(232, 232, 255);
   min-width: 70vw;
   min-height: 70vh;
+  margin-bottom: 20vh;
 }
 
 .gen {
@@ -198,13 +221,13 @@ fieldset {
   border: 0;
 }
 
-
 @media screen and (max-width: 500px) {
-
-  .cv{
+  .cv {
     display: flex;
     flex-direction: column;
     margin-bottom: 25vh;
   }
-  
+  .gen {
+    border-left: 0;
+  }
 }

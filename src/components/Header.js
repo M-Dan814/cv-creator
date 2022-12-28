@@ -8,8 +8,10 @@ class Header extends Component{
 
     render(){
         return(
-            <h1 className='header'>CV Generator</h1>
-        )
+            <div className='header'>
+            <h1 className='main-head'>CV Creator</h1>
+            <span className='sub-head'>Made by Muhammad Dayan</span>
+        </div>)
     }
 }
 
