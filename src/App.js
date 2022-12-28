@@ -3,6 +3,8 @@ import { General } from "./components/General";
 import { Education } from "./components/Education";
 import { Experience } from "./components/Experience";
 import { Generated } from "./components/generatedCV";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 class App extends Component {
   constructor() {
@@ -163,6 +165,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Header />
         <div className="input-form">
           <General
             handleChangeName={this.handleChangeName}
@@ -207,6 +210,7 @@ class App extends Component {
           expTo={this.state.expTo}
           edit={this.Edit}
         />
+        <Footer />
       </div>
     );
   }
