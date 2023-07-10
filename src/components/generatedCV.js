@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 
 class Generated extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
       <div className="cv" id="hidden">
         <div className="gen">
-          <img alt="No file received" src={this.props.image} height="200" width="200"/>
+          <img
+            alt="No file received"
+            src={this.props.image}
+            height="200"
+            width="200"
+          />
           <span>Name: {this.props.name}</span>
           <span>Father's Name: {this.props.father}</span>
           <span>Email: {this.props.email}</span>
@@ -32,6 +34,15 @@ class Generated extends Component {
           <span>From: {this.props.expFrom}</span>
           <span>To: {this.props.expTo}</span>
         </div>
+        <button
+          onClick={() => {
+            var actContents = document.body.innerHTML;
+            document.body.innerHTML = actContents;
+            window.print();
+          }}
+        >
+          Print CV
+        </button>
         <button onClick={this.props.edit}>Edit CV</button>
       </div>
     );
